@@ -54,13 +54,16 @@
     <div onclick="addCharacter('+')">+</div>
 
 <script type="text/javascript">
-    //model
+
     var resultBox = document.getElementById('resultBox');
 
-    //controller
+    //model
+    let input ='';
 
+    //controller
     function addCharacter(x) {
-        resultBox.innerHTML += x;
+        input += x;
+        show();
     }
 
     function calculate() {
@@ -68,13 +71,17 @@
             .innerHTML
             .replace('×', '*')
             .replace('÷', '/');
-        resultBox.innerHTML = eval(calculation);
+            show();
     }
     function clearResult() {
-        resultBox.innerHTML = '';
+        input ='';
+        show();
     }
 
     //view
+    function show() {
+        resultBox.innerHTML = input;
+    }
 </script>
 </body>
 </html>
