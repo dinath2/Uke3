@@ -67,10 +67,10 @@
     }
 
     function calculate() {
-        var calculation = resultBox
-            .innerHTML
+        var calculation = input
             .replace('×', '*')
             .replace('÷', '/');
+            input = eval(calculation);
             show();
     }
     function clearResult() {
