@@ -4,6 +4,15 @@
 <head>
     <meta charset="utf-8" />
     <title>EVENTYR TIIIIIID!!!!!!!!!!!!!</title>
+    <style>
+        button {
+            background-color: rgb(213, 171, 183);
+            border: 3px solid rgb(58, 56, 56);
+            border-radius: 15px;
+            padding: 5px 5px 5px 5px;
+            font-family: fantasy;
+        }
+    </style>
 </head>
 <body>
     <!--
@@ -20,6 +29,7 @@
         5*
     -->
     <div id="story"></div>
+    <div id="options"></div>
     <br>
     <button onclick="insertWord(this,1)">liten </button>
     <button onclick="insertWord(this,1)">stor </button>
@@ -42,19 +52,28 @@
     <br>
     <br />
     <button onclick="insertWord(this,5)">Nintendo Switch </button>
-    <button onclick="insertWord(this,5)">lefser </button>
-    <button onclick="insertWord(this,5)">HEEEEEEST </button>
+    <button onclick="insertWord(this,5)">lefse </button>
+    <button onclick="insertWord(this,5)">bok </button>
     <br>
     <br />
-    <button onclick="insertWord(this,sTOP)">Reset</button>
+    <button onclick="insertWord(this,99)">Reset</button>
 
     <script>
+
+        //testList = ["liten ","stor ","dårlig "]
+        //testList.forEach(word => {
+        //    document.getElementById("options") +=
+        //        "<button onclick='insertWord(this,1)'>${word}</button><br>";
+        //});
+
+        //model
         var option1 = " ___ ";
         var option2 = " ___ ";
         var option3 = " ___ ";
         var option4 = " ___ ";
         var option5 = " ___ ";
 
+        //view
         view();
         function view() {
             document.getElementById("story").innerHTML =
@@ -65,6 +84,7 @@
                 " med en " + option4 + option5;
         }
 
+        //controller
         function insertWord(word, wordNumber) {
             if (wordNumber == 1) {
                 option1 = word.innerHTML;
@@ -81,12 +101,9 @@
             if (wordNumber == 5) {
                 option5 = word.innerHTML;
             }
-            if (wordNumber == sTOP) {
+            if (wordNumber == 99) {
                 option1 = option2 = option3 = option4 = option5 = " __ ";
             }
-            //else {
-            //    option1 && option2 && option3 && option4 && option5 == "hacker";
-            //}
             view();
         }
 
