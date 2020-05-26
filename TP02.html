@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>EVENTYR TIIIIIID!!!!!!!!!!!!!</title>
+</head>
+<body>
+<!--
+    Dette er en historie om en/et/noen/etc. 1* 2* som 3* med en 4* 5*
+    1*
+        stor
+        liten
+    2*
+        katt
+        hund
+        vampyr
+    3*
+    4*
+    5*
+-->
+    <div id="story"></div>
+    <button onclick="insertWord(this,1)">Test 1</button>
+    <button onclick="insertWord(this,2)">Test 2</button>
+    <button onclick="insertWord(this,3)">Test 3</button>
+    <button onclick="insertWord(this,4)">Test 4</button>
+
+    <script>
+
+        //model
+        var wordOne = '__ ';
+        var wordTwo = '__ ';
+        var wordThree = '__ ';
+        var wordFour = '__ ';
+        var wordFive = '__ ';
+
+        var stuff = document.getElementById("story");
+
+
+        //controller
+        function insertWord(wordnumber,theId) {
+            view();
+            stuff.innerHTML += wordnumber.innerHTML;
+            wordOne += wordnumber.theId.innerHTML;
+            wordTwo += wordnumber.theId.innerHTML;
+            
+        }
+       
+
+        //view
+        view();
+        function view() {
+
+            stuff.innerHTML = "<div>Dette er en historie om en " + wordOne + wordTwo + " som " + wordThree + " med en " + wordFour + wordFive + "</div>";
+            
+        }
+    </script>
+</body>
+</html>
