@@ -20,39 +20,39 @@
     5*
 -->
     <div id="story"></div>
-    <button onclick="insertWord(this,1)">Test 1</button>
-    <button onclick="insertWord(this,2)">Test 2</button>
-    <button onclick="insertWord(this,3)">Test 3</button>
-    <button onclick="insertWord(this,4)">Test 4</button>
+    <button onclick=insertWord(this,1)>liten </button>
+    <button onclick=insertWord(this,1)>stor </button>
+    <button onclick=insertWord(this,1)>dårlig </button>
+
+    <button onclick=insertWord(this,2)>katt </button>
+    <button onclick=insertWord(this,2)>hund </button>
+    <button onclick=insertWord(this,2)>pølse </button>
 
     <script>
+        var option1 = " ___ ";
+        var option2 = " ___ ";
+        var option3 = " ___ ";
+        var option4 = " ___ ";
+        var option5 = " ___ ";
 
-        //model
-        var wordOne = '__ ';
-        var wordTwo = '__ ';
-        var wordThree = '__ ';
-        var wordFour = '__ ';
-        var wordFive = '__ ';
-
-        var stuff = document.getElementById("story");
-
-
-        //controller
-        function insertWord(wordnumber,theId) {
-            view();
-            stuff.innerHTML += wordnumber.innerHTML;
-            wordOne += wordnumber.theId.innerHTML;
-            wordTwo += wordnumber.theId.innerHTML;
-            
-        }
-       
-
-        //view
         view();
         function view() {
-
-            stuff.innerHTML = "<div>Dette er en historie om en " + wordOne + wordTwo + " som " + wordThree + " med en " + wordFour + wordFive + "</div>";
-            
+            document.getElementById("story").innerHTML =
+            "Dette er en historie om en " +
+                option1 + option2 +
+            "som " +
+                option3
+            " med en " + option4 + option5;
+        }
+        
+        function insertWord(word,wordNumber) {
+            if (wordNumber == 1) {
+                Option1 = word.innerHTML;
+            }
+            else if (wordNumber == 2) {
+                Option2 = word.innerHTML
+            }
+            view();
         }
     </script>
 </body>
