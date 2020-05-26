@@ -25,23 +25,28 @@
     <button onclick="insertWord(this,1)">stor </button>
     <button onclick="insertWord(this,1)">dårlig </button>
     <br>
+    <br />
     <button onclick="insertWord(this,2)">katt </button>
     <button onclick="insertWord(this,2)">hund </button>
     <button onclick="insertWord(this,2)">pølse </button>
     <br>
+    <br />
     <button onclick="insertWord(this,3)">danser </button>
     <button onclick="insertWord(this,3)">stjeler </button>
     <button onclick="insertWord(this,3)">gamer </button>
     <br>
+    <br />
     <button onclick="insertWord(this,4)">rosa </button>
     <button onclick="insertWord(this,4)">rund </button>
     <button onclick="insertWord(this,4)">magisk </button>
     <br>
+    <br />
     <button onclick="insertWord(this,5)">Nintendo Switch </button>
     <button onclick="insertWord(this,5)">lefser </button>
     <button onclick="insertWord(this,5)">HEEEEEEST </button>
     <br>
-    <button onclick="remove()">Reset</button>
+    <br />
+    <button onclick="insertWord(this,sTOP)">Reset</button>
 
     <script>
         var option1 = " ___ ";
@@ -76,19 +81,16 @@
             if (wordNumber == 5) {
                 option5 = word.innerHTML;
             }
-            else {
-                option1 && option2 && option3 && option4 && option5 == "hacker";
+            if (wordNumber == sTOP) {
+                option1 = option2 = option3 = option4 = option5 = " __ ";
             }
+            //else {
+            //    option1 && option2 && option3 && option4 && option5 == "hacker";
+            //}
             view();
         }
 
-        function remove() {
-            option1 = ' __ ';
-            option2 = ' __ ';
-            option3 = ' __ ';
-            option4 = ' __ ';
-            option5 = ' __ ';
-        }
+        
     </script>
 </body>
 </html>
