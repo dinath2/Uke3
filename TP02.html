@@ -135,7 +135,7 @@
             optionCount++;
             list.forEach(word => {
                 document.getElementById("options").innerHTML +=
-                    "<button id='optionButton' id='optionButton" + optionCount + "' onclick='insertWord(this," + optionCount + ")'>" + word + "</button>";
+                    "<button id='optionButton" + optionCount + "' onclick='insertWord(this," + optionCount + ")'>" + word + "</button>";
             });
             document.getElementById("options").innerHTML += "<br></br>";
         });
