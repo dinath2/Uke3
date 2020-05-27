@@ -5,6 +5,9 @@
     <meta charset="utf-8" />
     <title>EVENTYR TIIIIIID!!!!!!!!!!!!!</title>
     <style>
+        body {
+            user-select: none;
+        }
         button {
             border-radius: 15px;
             font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -116,11 +119,6 @@
         var option5 = "<span id='option5'> _____ </span>";
 
         //view
-        
-        document.getElementById("optionButton").onmouseover = function highlightOption() {
-            document.getElementById("optionButton").style.fontSize = "100px";
-            }
-
         view();
         function view() {
             document.getElementById("story").innerHTML =
@@ -137,11 +135,16 @@
             optionCount++;
             list.forEach(word => {
                 document.getElementById("options").innerHTML +=
-                    "<button id='optionButton" + optionCount + "' onclick='insertWord(this," + optionCount + ")'>" + word + "</button>";
+                    "<button id='optionButton' id='optionButton" + optionCount + "' onclick='insertWord(this," + optionCount + ")'>" + word + "</button>";
             });
             document.getElementById("options").innerHTML += "<br></br>";
         });
         
+        document.getElementById("optionButton").onmouseover = function() {highlightOption()};
+        function highlightOption() {
+            document.getElementsByTagName("optionButton").style.fontSize = "100px";
+        }
+
         function resetStory() {
             option1 = "<span id='option1'> _____ </span>";
             option2 = "<span id='option2'> _____ </span>";
