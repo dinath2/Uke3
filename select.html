@@ -23,14 +23,14 @@
     
         //view
         function show() {
-            $("background").style.color =$("color").value;
+            $("background").style.BackgroundColor =$("color").value;
         }
 
         //controller
-        if($("color") == $("black").value || $("blue").value) {
+        if($("color").value == $("black") || $("blue")) {
             $("background").style.color = "white";
         }
-        else if($("color") == $("lightgrey").value || $("green").value || $("red").value) {
+        else if($("color").value == $("grey") || $("green") || $("red")) {
             $("background").style.color = "black";
         }
     </script>
