@@ -17,24 +17,21 @@
     
     <script>
         //model
-        var background = document.getElementById('background');
-        var color = document.getElementById('color')
-        var b = document.getElementById('black')
-        var mb = document.getElementById('blue')
-        var lg = document.getElementById('grey')
-        var g = document.getElementById('green')
-        var r = document.getElementById('red')
+        fuction $(id) {
+            return document.getElementById(id);
+        }
     
         //view
-        function show(background) {
-            background.innerHTML =+ color.value
+        function show() {
+            $("background").style.color =$("color").value;
         }
+
         //controller
-        if() {
-
+        if($("color") == $(black).value || $(blue).value) {
+            $("background").style.color = "white";
         }
-        else if() {
-
+        else if($("color") == $(lightgrey).value || $(green).value || $(red).value) {
+            $("background").style.color = "black";
         }
     </script>
 </body>
