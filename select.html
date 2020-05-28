@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+</head>
+<body>
+    <div id="background">Test</div>
+    <select name="color" id="color" onchange="show(background)">
+        <option value="black" id="black">sort</option>
+        <option value="blue" id="blue">Blå</option>
+        <option value="lightgrey" id="grey">Lysgrå</option>
+        <option value="green" id="green">Grønn</option>
+        <option value="red" id="red">Rød</option>
+    </select>
+    
+    <script>
+        //model
+        var background = document.getElementById('background');
+        var color = document.getElementById('color')
+        var b = document.getElementById('black')
+        var mb = document.getElementById('blue')
+        var lg = document.getElementById('grey')
+        var g = document.getElementById('green')
+        var r = document.getElementById('red')
+    
+        //view
+        function show(background) {
+            background.innerHTML =+ color.value
+        }
+        //controller
+        if() {
+
+        }
+        else if() {
+
+        }
+    </script>
+</body>
+</html>
