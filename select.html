@@ -29,7 +29,7 @@
     
         //view
         function show(color) {
-            $("resultat").innerHTML = color.options[color.selectedIndex].text;
+            $("resultat").innerHTML = color.options[color.selectedIndex].innerHTML;
 
             $("resultat").style.backgroundColor = $("color").value;
             if (color.value == ("black" || "blue" || "red")) {
