@@ -12,7 +12,7 @@
     </style>
 </head>
 <body>
-    <div id="resultat">Test</div>
+    <div id="resultat">Velg en farge!</div>
     <select name="color" id="color" onchange="show(this)">
         <option value="blue" id="blue">Blå</option>
         <option value="black" id="black">Sort</option>
@@ -29,14 +29,14 @@
     
         //view
         function show(color) {
-            $("resultat").innerHTML = color.value;
+            $("resultat").innerHTML = color.options[color.selectedIndex].text;
 
             $("resultat").style.backgroundColor = $("color").value;
-            if ((color.value == "black") || (color.value == "blue") || (color.value == "red")) {
+            if (color.value == ("black" || "blue" || "red")) {
                 $("resultat").style.color = "white";
             }
-            if ((color.value == "lightgrey") || (color.value == "green")) {
-            $("resultat").style.color = "black";
+            if (color.value == ("lightgrey" || "green")) {
+                $("resultat").style.color = "black";
             }
         }
         //controller
