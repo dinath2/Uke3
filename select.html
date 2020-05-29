@@ -4,12 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Test</title>
+
+    <style>
+        div {
+            font-size:30px;
+        }
+    </style>
 </head>
 <body>
-    <div id="background">Test</div>
-    <select name="color" id="color" onchange="show()">
-        <option value="black" id="black">sort</option>
+    <div id="resultat">Test</div>
+    <select name="color" id="color" onchange="show(this)">
         <option value="blue" id="blue">Blå</option>
+        <option value="black" id="black">Sort</option>
         <option value="lightgrey" id="grey">Lysgrå</option>
         <option value="green" id="green">Grønn</option>
         <option value="red" id="red">Rød</option>
@@ -22,17 +28,21 @@
         }
     
         //view
-        function show() {
-            $("background").style.BackgroundColor =$("color").value;
+        function show(color) {
+            $("resultat").innerHTML = color.innerHTML;
+
+        }
+        //controller
+
+        /*
+        else if($("color").value ==  "lightgrey" || "green" || "red") {
+            $("resultat").style.color = "black";
         }
 
-        //controller
-        if($("color").value == $("black") || $("blue")) {
-            $("background").style.color = white;
-        }
-        else if($("color").value ==  lightgrey || green || red) {
-            $("background").style.color = black;
-        }
+                    $("resultat").style.BackgroundColor = $("color").value;
+        if ($("color").value == "black") {
+            $("resultat").style.color = "red";
+        */
     </script>
 </body>
 </html>
