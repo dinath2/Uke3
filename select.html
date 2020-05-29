@@ -29,19 +29,18 @@
     
         //view
         function show(color) {
-            $("resultat").innerHTML = color.innerHTML;
+            $("resultat").innerHTML = color.value;
 
             $("resultat").style.backgroundColor = $("color").value;
-            if (color.value == "black") {
+            if ((color.value == "black") || (color.value == "blue")) {
                 $("resultat").style.color = "white";
+            }
+            if ((color.value == "lightgrey") || (color.value == "green") || (color.value == "red")) {
+            $("resultat").style.color = "black";
             }
         }
         //controller
 
-        /*
-        else if($("color").value ==  "lightgrey" || "green" || "red") {
-            $("resultat").style.color = "black";
-        }
     </script>
 </body>
 </html>
