@@ -31,6 +31,10 @@
         function show(color) {
             $("resultat").innerHTML = color.innerHTML;
 
+            $("resultat").style.backgroundColor = $("color").value;
+            if (color.value == "black") {
+                $("resultat").style.color = "white";
+            }
         }
         //controller
 
@@ -38,11 +42,6 @@
         else if($("color").value ==  "lightgrey" || "green" || "red") {
             $("resultat").style.color = "black";
         }
-
-                    $("resultat").style.BackgroundColor = $("color").value;
-        if ($("color").value == "black") {
-            $("resultat").style.color = "red";
-        */
     </script>
 </body>
 </html>
